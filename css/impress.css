@@ -1,0 +1,646 @@
+/*-------------------------
+	Simple reset
+--------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*-------------------------
+	General Styles
+--------------------------*/
+
+html {
+    height: 100%;
+}
+
+body {
+    background: url(http://www.dreszler-development.de/images/interaction-media_dreszler-development2.jpg) center top no-repeat fixed;
+    /*background-size: 100%;*/
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+    height: 100%;
+    min-height: 600px;
+    padding: 100px 0 50px;
+    /*font:14px/1.3 'Segoe UI',Arial, sans-serif;*/
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    /*box-shadow:0 0 25px rgba(0, 0, 0, 0.3) inset;*/
+    height: 100%;
+}
+
+a, a:visited {
+    text-decoration: none;
+    outline: none;
+    color: #54a6de;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section, footer {
+    display: block;
+}
+
+#headernav {
+    position: fixed;
+    width: 1000px;
+    z-index: 998;
+    top: 0;
+    left: 50%;
+    margin-left: -500px;
+}
+
+.nav {
+    font-weight: normal !important;
+    z-index: 1000;
+    /*position: fixed;*/
+    margin-top: 15px;
+    float: right;
+    list-style: none;
+    font-size: 12px;
+    color: #717171;
+}
+
+.nav li {
+    display: inline;
+    color: #717171;
+}
+
+.nav a {
+    color: #717171;
+    text-decoration: none;
+}
+
+.nav a:visited {
+    color: #717171;
+}
+
+.nav a:hover {
+    color: #000;
+}
+
+.separator {
+    padding: 0 3px 0 5px;
+    font-size: 18px;
+}
+
+/*----------------------------
+	Styling the presentation
+-----------------------------*/
+#impress {
+}
+
+#impress:not(.impress-not-supported) .step {
+    opacity: 0.4;
+}
+
+#impress .step {
+    width: 900px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    -moz-transition: 1s opacity;
+    -webkit-transition: 1s opacity;
+    transition: 1s opacity;
+}
+
+#impress .step.active {
+    opacity: 1;
+}
+
+#impress h1 {
+    padding-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+    font-weight: 200;
+    color: #37aada;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #CCC;
+}
+
+#impress p {
+    color: #000;
+    /*font-weight:200;*/
+    z-index: 10;
+}
+
+#impress span {
+    font-weight: 400;
+    color: #37aada;
+    font-size: 28px;
+    z-index: 10;
+    font-weight: bold;
+}
+
+#fourth p:first-child, #fifth p:first-child, #sixth p:first-child {
+    font-size: 28px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #CCC;
+}
+
+.ptxt {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#impress img {
+    z-index: 1;
+}
+
+.arrow:hover {
+    opacity: 1;
+}
+
+#arrowLeft {
+    left: 45px;
+}
+
+#arrowRight {
+    right: 45px;
+}
+
+/* Hide the arrows if impress is not supported */
+
+#impress.impress-not-supported + .arrow, #impress.impress-not-supported + .arrow + .arrow {
+    /*display:none;*/
+}
+
+.past, .future {
+    opacity: 0;
+}
+
+.present {
+    opacity: 1;
+}
+
+.underlinedlink {
+    text-decoration: underline;
+    color: #000 !important;
+}
+
+#copyright {
+    width: 1000px;
+    left: 50%;
+    margin-left: -500px;
+    position: fixed;
+    bottom: 5%;
+}
+
+#copyright .boxInfo {
+    float: right;
+}
+
+#copyright .boxContact {
+    /*background: url("../images/back-to-home_black.png") no-repeat left top;*/
+    float: left;
+    margin: 0;
+    min-height: 120px;
+    padding: 14px 0 0 60px;
+    text-align: left;
+    display: block;
+    font-size: 12px;
+    color: #000 !important;
+    font-weight: 200 !important;
+}
+
+.boxContact span {
+    font-size: 12px;
+    font-weight: 400 !important;
+    line-height: 1.375em;
+}
+
+.boxContact h3 {
+    line-height: 0em;
+    font-size: 14px;
+    color: #717171 !important;
+    font-weight: 400 !important;
+    text-decoration: none;
+}
+
+.copy {
+    font-weight: 400 !important;
+    color: #000 !important;
+    font-size: 11px;
+    font-weight: 100;
+    text-align: right;
+    display: block;
+    margin: 50px 0 0 0;
+}
+
+/*----------------------------
+	Slide 1 - first
+-----------------------------*/
+
+#impress #first {
+    height: auto;
+    font-size: 48px;
+    color: #37aada;
+}
+
+#impress #second {
+    font-size: 48px;
+    color: #37aada;
+    width: 500px;
+    height: auto;
+}
+
+#impress #third {
+    font-size: 14px;
+    color: #000;
+    width: 680px;
+    height: auto;
+    opacity: 0;
+}
+
+#third p {
+
+}
+
+#impress #third.active {
+    opacity: 1 !important;
+}
+
+#impress #third.past {
+    opacity: 0.3;
+}
+
+#impress #eighth {
+    width: 1300px;
+    overflow: visible;
+}
+
+#impress #eighth #lastimage, #impress #third #lastimage {
+    margin-top: -230px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 2000px;
+    font-weight: normal !important;
+}
+
+#impress #eighth .lastimgbox, #impress #third .lastimgbox {
+    opacity: 0.8;
+    display: inline-block;
+    background: #FFF;
+    padding: 5px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.lastimgbox span {
+    color: #000 !important;
+    font-size: 12px !important;
+    z-index: 10;
+    float: left;
+    font-weight: normal !important;
+}
+
+.one {
+    /*margin-top:80px;*/
+}
+
+.one p {
+    font-weight: 200;
+    opacity: 1;
+    width: 680px;
+    color: #000 !important;
+    opacity: 0.9;
+    font-size: 35px;
+    display: block;
+}
+
+.two p {
+    opacity: 1;
+    width: 670px;
+    font-size: 15px;
+    text-align: left;
+    margin: 5px;
+    color: #000 !important;
+    padding: 0 !important;
+    line-height: 22px;
+
+}
+
+.three {
+    width: 680px;
+    padding-top: 10px !important;
+}
+
+#eighth .three a:first-child {
+    color: #000;
+    font-size: 22px !important;
+    opacity: 1;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    width: 19%;
+    min-width: 100px;
+    height: 60px;
+    float: left;
+    text-align: left;
+    background: url("http://www.dreszler-development.de/images/arrowright.png") no-repeat right;
+    display: block;
+    padding: 30px 35px 0 0;
+    text-decoration: none;
+    margin-left: 90px;
+    float: left;
+}
+
+#eighth .three a:last-child {
+    color: #000;
+    font-size: 22px !important;
+    opacity: 1;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    width: 15%;
+    min-width: 100px;
+    height: 60px;
+    float: left;
+    text-align: left;
+    background: url("http://www.dreszler-development.de/images/arrowright.png") no-repeat right;
+    display: block;
+    padding: 30px 40px 0 0;
+    text-decoration: none;
+    margin-right: 130px;
+    float: right;
+}
+
+#third .three a {
+    color: #000;
+    font-size: 22px !important;
+    opacity: 1;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 38%;
+    min-width: 100px;
+    height: 60px;
+    padding-right: 15px;
+    text-align: left;
+    background: url("http://www.dreszler-development.de/images/arrowright.png") no-repeat right;
+    display: block;
+    padding-top: 30px;
+    text-decoration: none;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+#Logo {
+    width: 165px;
+    height: 81px;
+    background: url(http://www.dreszler-development.de/images/logo_dreszler_development_dunkel.png) no-repeat;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    margin-left: -83px;
+    cursor: pointer;
+    z-index: 1000;
+    overflow: hidden;
+    opacity: 0.8;
+    border: none !important;
+    text-decoration: none !important;
+    -moz-transition: 0.2s opacity;
+    -webkit-transition: 0.2s opacity;
+    transition: 0.2s opacity;
+}
+
+#arrows {
+    position: fixed;
+    width: 1000px;
+    z-index: 998;
+    top: 45%;
+    left: 50%;
+    margin-left: -500px;
+}
+
+#arrowLeft {
+    width: 60px;
+    height: 120px;
+    background: url(http://www.dreszler-development.de/images/arrowleft.png) no-repeat;
+    /*position:fixed;
+    top:45%;*/
+    float: left;
+    cursor: pointer;
+    text-indent: -1000px;
+    overflow: hidden;
+    opacity: 0.8;
+    border: none !important;
+    text-decoration: none !important;
+    opacity: 0;
+}
+
+#arrowLeft:hover {
+    background: url(http://www.dreszler-development.de/images/arrowleft_hover.png) no-repeat;
+}
+
+#arrowRight {
+    width: 60px;
+    height: 120px;
+    float: right;
+    background: url(http://www.dreszler-development.de/images/arrowright_ani.gif) no-repeat;
+    /*position:fixed;
+    top:45%;*/
+    cursor: pointer;
+    text-indent: -1000px;
+    overflow: hidden;
+    opacity: 0.8;
+    border: none !important;
+    text-decoration: none !important;
+}
+
+#arrowRight:hover {
+    background: url(http://www.dreszler-development.de/images/arrowright_hover.png) no-repeat;
+}
+
+#controllarrows {
+    width: 300px;
+    height: 250px;
+    background: url(http://www.dreszler-development.de/images/steuerung-icon.png) no-repeat;
+    position: fixed;
+    bottom: -300px;
+    left: 50%;
+    margin-left: -150px;
+    cursor: pointer;
+    z-index: 1000;
+    overflow: hidden;
+    border: none !important;
+    /*animation: hintslide 6s;
+        -webkit-animation: hintslide 6s;
+        -webkit-animation-timing-function: ease-out;
+        */
+}
+
+/* ANIMATIONS*/
+.rightleftanimate, .updownanimate {
+    opacity: 0;
+}
+
+.present .rightleftanimate {
+    animation: horizontaltravel 1s;
+    -webkit-animation: horizontaltravel 1s; /* Safari and Chrome*/
+    opacity: 1;
+}
+
+.firsttext {
+    font-size: 18px;
+    /*	animation: bounceIn 0.5s;
+    -webkit-animation: bounceIn 0.5s; */
+    font-weight: normal;
+}
+
+.present .updownanimate {
+    animation: verticaltravel 1s;
+    -webkit-animation: verticaltravel 1s; /* Safari and Chrome*/
+    opacity: 1;
+}
+
+@keyframes hintslide {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    60% {
+        transform: translateY(-300px);
+    }
+    90% {
+        transform: translateY(-300px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes hintslide {
+    0% {
+        -webkit-transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(0);
+    }
+    60% {
+        -webkit-transform: translateY(-300px);
+    }
+    90% {
+        -webkit-transform: translateY(-300px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes colorizeNav {
+    0% {
+        background: url(http://www.dreszler-development.de/images/arrowright_ani.gif) no-repeat;
+    }
+    100% {
+        background: url(http://www.dreszler-development.de/images/arrowright_ani.gif) no-repeat;
+    }
+}
+
+@-webkit-keyframes colorizeNav {
+    0% {
+        background: url(http://www.dreszler-development.de/images/arrowright_ani.gif) no-repeat;
+    }
+    100% {
+        background: url(http://www.dreszler-development.de/images/arrowright_ani.gif) no-repeat;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 1;
+        transform: scale(50);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes bounceIn {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(50);
+    }
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes horizontaltravel {
+    0% {
+        opacity: 0;
+        transform: translateX(2000px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateX(-30px);
+    }
+    80% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes horizontaltravel /* Safari and Chrome*/
+{
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(2000px);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translateX(-30px);
+    }
+    80% {
+        -webkit-transform: translateX(10px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+    }
+}
+
+@keyframes verticaltravel /* Safari and Chrome*/
+{
+    0% {
+        opacity: 0;
+        transform: translateY(-2000px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+    80% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes verticaltravel /* Safari and Chrome*/
+{
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-2000px);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translateY(30px);
+    }
+    80% {
+        -webkit-transform: translateY(10px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+    }
+}

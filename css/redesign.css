@@ -1,0 +1,407 @@
+/*      Style Reset     */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+html {
+    background: #000000;
+    -webkit-background-size: cover;
+}
+
+body {
+
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+button {
+    border-radius: 10px;
+    border: solid #ffffff 2px;
+}
+
+button:hover {
+    border: solid #2212ff 2px;
+}
+
+/*      Fallback message       */
+.fallback-message {
+    font-family: 'Advent Pro', sans-serif;
+    line-height: 1.3;
+
+    width: 780px;
+    padding: 10px 10px 0;
+    margin: 20px auto;
+
+    border: 1px solid #E4C652;
+    border-radius: 10px;
+    background: #EEDC94;
+}
+
+.fallback-message p {
+    margin-bottom: 10px;
+}
+
+.impress-supported .fallback-message {
+    display: none;
+}
+
+/*      Text styles ...     */
+
+b, strong {
+    font-weight: bold
+}
+
+i, em {
+    font-style: italic
+}
+
+u {
+    text-decoration: underline
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Styling classes */
+
+.step {
+    position: relative;
+    width: 1100px;
+    padding: 10px;
+    margin: 20px auto;
+    font-weight: 200;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.impress-enabled .step {
+    margin: 0;
+    opacity: 0.3;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.impress-enabled .step.active {
+    opacity: 1
+}
+
+/* Styling the individual presentation screens */
+
+.float {
+    float: left;
+}
+
+.hidden{
+    display: none;
+}
+
+.line {
+    display: inline-block;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+#explore h2 {
+    text-align: center;
+    font-size: 200%;
+    font-weight: bold;
+}
+
+#explore li {
+    margin: 40px 0;
+}
+
+#explore li img {
+    width: 100px;
+    margin: 0 20px;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+}
+
+#explore li:hover img {
+    -webkit-transform: scale(1.3, 1.3);
+    -moz-transform: scale(1.3, 1.3);
+    -ms-transform: scale(1.3, 1.3);
+}
+
+#explore li h3 {
+    font-weight: bold;
+    font-size: 120%;
+}
+
+#explore li p {
+    width: 240px;
+}
+
+.feature {
+    font-size: 200%;
+}
+
+.feature h2 {
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.feature p {
+    width: 500px;
+}
+
+.faq h2 {
+    font-size: 200%;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.faq h3 {
+    font-size: 160%;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.faq .video {
+    margin: auto;
+    text-align: center;
+}
+
+/* Styling the menu */
+
+#prev {
+    position: absolute;
+    color: #ffffff;
+    right: 0;
+    top: 0;
+    height: 80px;
+    width: 100px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#next {
+    position: absolute;
+    color: #ffffff;
+    right: 0;
+    top: 80px;
+    height: 80px;
+    width: 100px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.volume {
+    color: #ffffff;
+}
+
+#volume-on {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    width: 50px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#volume-off {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    width: 50px;
+    display: none;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.menu {
+    text-align: right;
+    position: absolute;
+    width: auto;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 120px 0 0 0;
+}
+
+.menu ul li {
+    position: relative;
+    opacity: 0.5;
+    right: 100px;
+    font-size: 20px;
+    background: #323639;
+    margin: 10px 0;
+    padding: 8px 12px 8px 12px;
+    vertical-align: middle;
+    display: block;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-topright: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.menu ul li a {
+    color: white;
+    display: block;
+    position: relative;
+    top: -5px;
+    left: -5px;
+    text-decoration: none;
+}
+
+.menu ul li:hover a {
+
+}
+
+.menu ul li:hover {
+    opacity: 1;
+    right: 0;
+    background: darkblue;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.menu ul li i {
+    font-size: 32px;
+    position: relative;
+    top: 5px;
+    left: 10px;
+}
+
+.menu ul li img {
+    width: 30px;
+}
+
+@font-face {
+    font-family: Antipasto;
+    src: url(../font/Antipasto_regular.otf);
+}
+
+.font {
+    font-family: Antipasto;
+}
+
+.hint {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 150px;
+    background: #000036;
+    color: #EEE;
+    text-align: center;
+    font-size: 40px;
+    padding: 20px;
+    z-index: 100;
+    opacity: 0;
+    -webkit-transform: translateY(400px);
+    -moz-transform: translateY(400px);
+    -ms-transform: translateY(400px);
+    -o-transform: translateY(400px);
+    transform: translateY(400px);
+    -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
+    -moz-transition: opacity 1s, -moz-transform 0.5s 1s;
+    -ms-transition: opacity 1s, -ms-transform 0.5s 1s;
+    -o-transition: opacity 1s, -o-transform 0.5s 1s;
+    transition: opacity 1s, transform 0.5s 1s;
+}
+
+.impress-enabled .hint {
+    display: block
+}
+
+.hint p.mouse {
+    background: url('../img/arrow.png') 30px 30px no-repeat;
+    display: inline;
+    padding: 20px 40px 20px 150px;
+}
+
+.impress-on-explore .hint {
+    opacity: 1;
+    -webkit-transform: translateY(150px);
+    -moz-transform: translateY(150px);
+    -ms-transform: translateY(150px);
+    -o-transform: translateY(150px);
+    transform: translateY(150px);
+    -webkit-transition: opacity 0, 1s 0.5 ss, -webkit-transform 1s 3s;
+    -moz-transition: opacity 0, 1s 0.5 ss, -moz-transform 1s 3s;
+    -ms-transition: opacity 0, 1s 0.5 ss, -ms-transform 1s 3s;
+    -o-transition: opacity 0, 1s 0.5 ss, -o-transform 1s 3s;
+    transition: opacity 0, 1s 0.5 ss, transform 1s 3s;
+}
